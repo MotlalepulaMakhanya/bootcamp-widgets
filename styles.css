@@ -1,0 +1,13 @@
+body {
+    background-image: url(10.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+title {
+    text-align: center;
+}
+h1{
+    text-align: center;
+    background-color: #ddd;
+    background-size: 20px;
+}

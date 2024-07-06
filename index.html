@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bootcamp Functions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <script src="script.js" defer></script>
+    <h1>Bootcamp Functions Widgets</h1>
+
+    <!-- Greet Function -->
+    <h2>Greet Function Widget</h2>
+    <input type="text" id="neighborName" placeholder="Enter neighbor's name">
+    <select id="language">
+        <option value="en">English</option>
+        <option value="se">Sesotho</option>
+        <option value="ts">Tsotsitaal</option>
+        <option value="fr">French</option>
+    </select>
+    <button onclick="displayGreeting()">Greet</button>
+    <p id="greeting"></p>
+
+    <!-- Transport Fee Function -->
+    <h2>Transport Fee Widget</h2>
+    <form>
+        <label><input type="radio" name="shift" value="morning" onclick="showTransportFee('morning')">
+            Morning</label><br>
+        <label><input type="radio" name="shift" value="afternoon" onclick="showTransportFee('afternoon')">
+            Afternoon</label><br>
+        <label><input type="radio" name="shift" value="night" onclick="showTransportFee('night')"> Night</label><br>
+    </form>
+    <p id="feeDisplay"></p>
+
+    <!-- Total Phone Bill Widget -->
+    <h2>Total Phone Bill Widget</h2>
+    <input type="number" id="callCount" placeholder="Enter number of calls">
+    <input type="number" id="smsCount" placeholder="Enter number of SMS">
+    <button onclick="displayTotalPhoneBill()">Calculate Total Bill</button>
+    <p id="totalBill">Total Phone Bill: R0.00</p>
+
+    <!--Wword Game Widget-->
+    <h2>Word Game Widget</h2>
+    <label for="sentenceInput">Enter a sentence:</label>
+    <input type="text" id="sentenceInput" placeholder="Enter your sentence">
+    <button onclick="processSentence()">Process Sentence</button>
+    <h3>Results:</h3>
+    <p>Longest Word: <span id="longestWord"></span></p>
+    <p>Shortest Word: <span id="shortestWord"></span></p>
+    <p>Word Lengths: <span id="wordLengths"></span></p>
+</body>
+
+</html>
