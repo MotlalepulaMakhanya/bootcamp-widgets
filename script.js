@@ -12,7 +12,11 @@ function greet(neighborsName, language) {
 function displayGreeting() {
     const name = document.getElementById('neighborName').value;
     const lang = document.getElementById('language').value;
-    document.getElementById('greeting').innerText = greet(name, lang);
+    if (/\d/.test(name)) {
+        document.getElementById('greeting').innerText = 'Invalid name. Please enter a name without numbers.';
+    } else {
+        document.getElementById('greeting').innerText = greet(name, lang);
+    }
 }
 
 // Transport Fee Function
@@ -37,7 +41,8 @@ function displayTotalPhoneBill() {
     const bill = totalPhoneBill(callCount, smsCount);
     document.getElementById('totalBill').innerText = 'Total Phone Bill: R' + bill;
 }
-//Word Game Widget
+
+// Word Game Widget
 function processSentence() {
     const sentence = document.getElementById('sentenceInput').value;
     const words = sentence.split(' ');
